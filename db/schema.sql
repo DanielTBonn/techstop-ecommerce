@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS project_db;
+DROP DATABASE IF EXISTS techstore_db;
 
-CREATE DATABASE project_db;
+CREATE DATABASE techstore_db;
