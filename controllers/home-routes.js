@@ -9,8 +9,10 @@ router.get('/', async (req, res) => {
 
     const products = 
       {
-        name: "Example Product Name",
-        price: 6000
+        product:{
+          name: "Example Product Name",
+          price: 6000
+        } 
       };
       console.log(products)
 
