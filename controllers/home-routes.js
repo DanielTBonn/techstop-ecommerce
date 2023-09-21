@@ -6,7 +6,19 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
   try {
 
-    res.render('homepage');
+
+    const products = 
+      {
+        product:{
+          name: "Example Product Name",
+          price: 6000
+        } 
+      };
+      console.log(products)
+
+    res.render('homepage',{
+      products
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
