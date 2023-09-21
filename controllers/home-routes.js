@@ -7,15 +7,14 @@ router.get('/', async (req, res) => {
   try {
 
 
-    const products = 
-      {
+    const products =  {
         name: "Example Product Name",
         price: 6000
-      };
+      }
       console.log(products)
 
     res.render('homepage',
-    products
+    {products}
 );
   } catch (err) {
     console.log(err);
