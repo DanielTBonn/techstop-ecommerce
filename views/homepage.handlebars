@@ -1,15 +1,11 @@
 <section class="product-list">
-    {{!-- {{#each products as |product|}} --}}
-    {{!-- {{#if 0 includeZero=true }}
+    {{#each products as |product|}} 
+    {{!-- {{#if 0 includeZero=true }} --}}
 
 
     {{> homepage-details }}
-    {{/if}} --}}
-    {{!-- {{/each}} --}}
-    <div class="product">
-        <h2>{{products.name}}</h2>
-        <p>Price: ${{products.price}}</p>
-        <button>Add to Cart</button>
-    </div>
+    {{!-- {{/if}} --}}
+    {{/each}}
+
 
 </section>
