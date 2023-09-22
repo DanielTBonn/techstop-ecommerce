@@ -1,5 +1,5 @@
 const router = require('express').Router();
-// const { User} = require('../models');
+const { Review } = require('../models');
 // const withAuth  = require('../utils/auth')
 
 // GET all blogpost for homepage
@@ -14,12 +14,35 @@ router.get('/', async (req, res) => {
           price: 6000
         } 
       };
-      console.log(products)
+      // console.log(products)
 
     res.render('homepage',{
       products
     });
   } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/product', async (req, res) => {
+
+  try {
+
+    const reviewData = await Review.findAll();
+    console.log(reviewData)
+
+    const reviews = reviewData.map((review) =>
+    review.get({ plain: true})
+    );
+
+    
+    
+    res.render('product',{
+      reviews
+    });
+  } catch (err) {
+    console.log("There was an error")
     console.log(err);
     res.status(500).json(err);
   }
