@@ -16,18 +16,18 @@ foreignKey: 'category_id',
 onDelete: 'CASCADE',
 });
 
-// // User has many reviews
-// User.hasMany(Review, {
-//     foreignKey: 'user_id',
-//     onDelete: 'CASCADE'
-// });
+// User has many reviews
+User.hasMany(Review, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
 
 
-// // Review belongs to user
-// Review.belongsTo(User, {
-//     foreignKey: 'user_id',
-//     onDelete: 'CASCADE'
-// });
+// Review belongs to user
+Review.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
 
 // Blogpost has many comments
 Product.hasMany(Review, {

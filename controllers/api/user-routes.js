@@ -1,12 +1,15 @@
 const router = require('express').Router();
-const { User } = require('../../utils/auth');
+const { User, Review } = require('../../models');
 
-// 
+// GET route for user and user reviews
 router.get('/', async (req, res) => {
     try {
-        const userData = await User.findAll();
-        // const users = userData.get({ plain: true});
-        // console.log(users);
+        const userData = await User.findAll({
+            include: [
+                {model: Review}
+            ],
+            attributes: { exclude: ['password'] }
+        });
         res.status(200).json(userData);
     } catch (err) {
         res.status(500).json(err);
