@@ -25,4 +25,23 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/product', async (req, res) => {
+
+  try {
+
+    const reviewData = await Review.findall();
+    const reviews = reviewData.get({ plain: true});
+
+    
+    
+    res.render('product',{
+      reviews
+    });
+  } catch (err) {
+    console.log("There was an error")
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
