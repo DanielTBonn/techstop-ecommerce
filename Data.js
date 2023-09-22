@@ -56,7 +56,7 @@
     id: 7,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
     product_name = "Key Boards and Mice",
     price: 95.00,
-    description: "a panel of keys used for putting information including letters, words, and numbers into your computer. Mouse—is a hand-operated pointing device. ",
+    description: "a panel of keys used for putting information including letters, words, and numbers into your computer. Mouse— is a hand-operated pointing device. ",
     image: "https://www.imagesrc.com/image",
     category_id: 1                                  // This should be whatever category it belongs to
 },
