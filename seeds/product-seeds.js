@@ -7,7 +7,7 @@ const productData = [
         price: 1.00,
         description: "Some shoes that are brown.",
         image: "https://theblacktux.com/_next/image?url=https%3A%2F%2Fstatic.theblacktux.com%2Fproducts%2Fshoes%2Fbrown-leather-shoes%2FBrownLeatherShoes_1_1812x1875.jpg%3Fcrop%3D500%3A667&w=3840&q=75",
-        // category_id: 1,
+        category_id: 1,
     },
     {
         id: 9,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
@@ -17,7 +17,6 @@ const productData = [
         image: "https://www.imagesrc.com/image",
         category_id: 1                                  // This should be whatever category it belongs to
     },
-    
     {
         id: 2,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
         product_name: "Computers",

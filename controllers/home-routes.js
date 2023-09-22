@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Review } = require('../models');
+const { Category, Product, Review } = require('../models');
 // const withAuth  = require('../utils/auth')
 
 // GET all blogpost for homepage
@@ -22,17 +22,26 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/product', async (req, res) => {
+router.get('/product/:id', async (req, res) => {
 
   try {
 
+    const productData = await Product.findByPk(req.params.id, {
+      include: [
+        { model: Category },
+        { model: Review }
+      ]
+    });
+    
+    console.log("PRODUCT DATA: ", productData)
+    
     const reviewData = await Review.findAll();
-    console.log(reviewData)
-
+    
     const reviews = reviewData.map((review) =>
     review.get({ plain: true})
     );
-
+    
+    console.log("REVIEW DATA: ", reviewData)
     
     
     res.render('product',{
