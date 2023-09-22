@@ -2,8 +2,8 @@
 const reviewFormHandler = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector('#title-content').value.trim();
-    const content = document.querySelector('#body-content').value.trim();
+    const title = document.querySelector('#name').value.trim();
+    const content = document.querySelector('#review').value.trim();
 
     if (title && content) {
         const response = await fetch('/api/reviews', {
