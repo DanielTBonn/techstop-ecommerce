@@ -7,11 +7,14 @@
 <body>
   <header>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#login">Login</a></li>
-        </ul>
+            <a href="/">Home</a>
+            <a href="#categories">Categories</a>
+             {{#if logged_in}}
+            <button id="logout" class="btn-no-style">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+            {{/if}}
     </nav>
     <h1>E-commerce Tech Store</h1>
   </header>
@@ -19,6 +22,10 @@
   <main>
     {{{body}}}
   </main>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 </body>
 </html>

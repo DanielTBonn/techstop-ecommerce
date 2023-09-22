@@ -8,7 +8,7 @@ const reviewFormHandler = async (event) => {
     const currentUrl = await window.location.href;
     const product_id = await currentUrl.split('/').at(-1)
 
-    if (name && content) {
+    if (content) {
         const response = await fetch('/api/reviews', {
             method: 'POST',
             body: JSON.stringify({ 
