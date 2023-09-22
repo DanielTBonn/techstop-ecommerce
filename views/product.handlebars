@@ -1,4 +1,4 @@
-<form class="review-form" id="reviewForm" action="/submit_review" method="POST">
+<form class="review-form" id="reviewForm" >
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -35,6 +35,7 @@
             <p>{{review}}</p>
         </div>
     </script>
+<script src="./js/reviews.js"></script>
 
 <section class="review-list">
     {{#each reviews as |review|}}
