@@ -1,4 +1,4 @@
-// const User = require('./User');
+const User = require('./User');
 const Product = require('./Product');
 const Category = require('./Category');
 const Review = require('./Review');
@@ -37,7 +37,7 @@ Product.hasMany(Review, {
 
 
 module.exports = { 
-    // User,
+    User,
     Product,
     Category,
     Review 

@@ -32,8 +32,10 @@ router.get('/product/:id', async (req, res) => {
         { model: Review }
       ]
     });
+
+    const product = productData.get({ plain: true});
     
-    console.log("PRODUCT DATA: ", productData)
+    console.log("PRODUCT DATA: ", product)
     
     const reviewData = await Review.findAll();
     
@@ -41,11 +43,11 @@ router.get('/product/:id', async (req, res) => {
     review.get({ plain: true})
     );
     
-    console.log("REVIEW DATA: ", reviewData)
+    console.log("REVIEW DATA: ", reviews)
     
     
     res.render('product',{
-      reviews
+      product
     });
   } catch (err) {
     console.log("There was an error")
