@@ -7,14 +7,11 @@ router.get('/', async (req, res) => {
   try {
 
 
-    const products = 
-      {
-        product:{
-          name: "Example Product Name",
-          price: 6000
-        } 
-      };
-      // console.log(products)
+    const productData = await Product.findAll();
+    const products = productData.map((product) =>
+    product.get({ plain: true})
+    );
+    // console.log(products)
 
     res.render('homepage',{
       products
