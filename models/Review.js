@@ -19,20 +19,20 @@ Review.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // user_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'user',
-        //         key: 'id'
-        //     }
-        // },
-        // product_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'product',
-        //         key: 'id'
-        //     }
-        // }
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        },
+        product_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'product',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
