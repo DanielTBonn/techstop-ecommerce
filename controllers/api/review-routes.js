@@ -25,15 +25,16 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try { 
 
-        req.session.save(() => {
-            req.session.user_id = 1;
+        // req.session.save(() => {
+        //     req.session.user_id = 1;
+        //     req.session.username = 'DanielTBonn'
             
-          });
+        //   });
 
         const reviewData = await Review.create({
-                id: req.session.user_id,
                 content: req.body.content,
-                username: req.body.username,
+                username: req.session.username,
+                user_id: req.session.user_id,
                 product_id: req.body.product_id
             }
         );
