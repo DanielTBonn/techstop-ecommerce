@@ -2,7 +2,7 @@
 const reviewFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#name').value.trim();
+    // const name = document.querySelector('#name').value.trim();
     const content = document.querySelector('#review').value.trim();
 
     const currentUrl = await window.location.href;
@@ -11,7 +11,11 @@ const reviewFormHandler = async (event) => {
     if (name && content) {
         const response = await fetch('/api/reviews', {
             method: 'POST',
-            body: JSON.stringify({ content, username: name, product_id }),
+            body: JSON.stringify({ 
+                content,
+                // username: name,
+                product_id 
+            }),
             headers: { 'Content-Type': 'application/json' },
         });
 
