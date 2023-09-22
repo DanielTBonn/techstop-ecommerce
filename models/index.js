@@ -1,4 +1,4 @@
-// const User = require('./User');
+const User = require('./User');
 const Product = require('./Product');
 const Category = require('./Category');
 const Review = require('./Review');
@@ -16,18 +16,18 @@ foreignKey: 'category_id',
 onDelete: 'CASCADE',
 });
 
-// // User has many reviews
-// User.hasMany(Review, {
-//     foreignKey: 'user_id',
-//     onDelete: 'CASCADE'
-// });
+// User has many reviews
+User.hasMany(Review, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
 
 
-// // Review belongs to user
-// Review.belongsTo(User, {
-//     foreignKey: 'user_id',
-//     onDelete: 'CASCADE'
-// });
+// Review belongs to user
+Review.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
 
 // Blogpost has many comments
 Product.hasMany(Review, {
@@ -37,7 +37,7 @@ Product.hasMany(Review, {
 
 
 module.exports = { 
-    // User,
+    User,
     Product,
     Category,
     Review 
