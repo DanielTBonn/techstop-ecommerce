@@ -1,0 +1,46 @@
+<form class="review-form" id="reviewForm" >
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">5 stars</option>
+                <option value="4">4 stars</option>
+                <option value="3">3 stars</option>
+                <option value="2">2 stars</option>
+                <option value="1">1 star</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="review">Review:</label>
+            <textarea class="body-content" id="review" name="review" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <script id="review-template" type="text/x-handlebars-template">
+        <div class="review">
+            <h3>{{name}}</h3>
+            <p><strong>Rating:</strong> {{rating}} stars</p>
+            <p>{{review}}</p>
+        </div>
+    </script>
+<script src="./js/reviews.js"></script>
+
+<section class="review-list">
+    {{#each reviews as |review|}}
+    {{> review-details }}
+    {{/each}}
+</section>
+
+
