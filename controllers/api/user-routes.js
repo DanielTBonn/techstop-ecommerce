@@ -1,12 +1,13 @@
 const router = require('express').Router();
-const { User, Review } = require('../../models');
+const { User, Review, Cart } = require('../../models');
 
 // GET route for user and user reviews
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
             include: [
-                {model: Review}
+                {model: Review},
+                {model: Cart}
             ],
             attributes: { exclude: ['password'] }
         });
