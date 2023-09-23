@@ -25,11 +25,11 @@ const categoryData = [
         category_name: 'Computer Monitors',
     },{
         id: 7,
-        category_name: 'Keyboards and Mice',
+        category_name: 'Accessories',
     },
     {
         id: 8,
-        category_name: 'Gaming Consoles',
+        category_name: 'Consoles',
     }
 ]
 
