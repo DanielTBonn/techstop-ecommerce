@@ -16,7 +16,8 @@ const productData = [
         price: "823.00",
         description: "A mobile phone that can make and receive calls",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 1,
+        cart_id: 1                                  
     },
     {
         id: 2,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
@@ -35,7 +36,6 @@ const productData = [
         image: "https://www.imagesrc.com/image",
         category_id: 1                                  // This should be whatever category it belongs to
     },
-    
     {
         id: 4,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
         product_name: "Laptops",
