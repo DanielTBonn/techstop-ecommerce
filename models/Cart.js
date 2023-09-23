@@ -1,9 +1,10 @@
+// Cart model for sql
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Review extends Model {}
+class Cart extends Model {} 
 
-Review.init(
+Cart.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,25 +12,10 @@ Review.init(
             primaryKey: true,
             autoIncrement: true
         }, 
-        content: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'id'
-            }
-        },
-        product_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'product',
                 key: 'id'
             }
         }
@@ -39,8 +25,8 @@ Review.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'review'
+        modelName: 'cart'
     }
-);
+)
 
-module.exports = Review;
+module.exports = Cart;

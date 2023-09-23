@@ -1,12 +1,13 @@
 const router = require('express').Router();
-const { User, Review } = require('../../models');
+const { User, Review, Cart } = require('../../models');
 
 // GET route for user and user reviews
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
             include: [
-                {model: Review}
+                {model: Review},
+                {model: Cart}
             ],
             attributes: { exclude: ['password'] }
         });
@@ -49,6 +50,7 @@ router.post('/login', async (req, res) => {
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.username = userData.username;
+        req.session.cart_id = userData.cart.id;
         req.session.logged_in = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });

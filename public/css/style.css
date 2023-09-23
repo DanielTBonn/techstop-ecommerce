@@ -2,6 +2,13 @@ nav a {
     padding: 10px;
 }
 
+nav a {
+    color: var(--light);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+
 .header-page{
     background-color: rgba(204, 219, 239, 0.757);
     display: flex;
@@ -12,4 +19,16 @@ nav a {
 body {
     margin: auto;
     background-color: rgb(181 177 177 / 20%);
+    font-family: Arial;
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    transition: color 0.1s;
+    margin-left: 16px;
 }

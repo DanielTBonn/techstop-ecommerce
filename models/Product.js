@@ -51,6 +51,13 @@ Product.init(
         model: 'category',
         key: 'id',
       }
+    },
+    cart_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'cart',
+            key: 'id'
+        }
     }
   },
   {
