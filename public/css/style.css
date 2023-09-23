@@ -1,0 +1,15 @@
+nav a {
+    padding: 10px;
+}
+
+.header-page{
+    background-color: rgba(204, 219, 239, 0.757);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    margin: auto;
+    background-color: rgb(181 177 177 / 20%);
+}
