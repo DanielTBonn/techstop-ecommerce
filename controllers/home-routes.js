@@ -23,6 +23,30 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET all blogpost for homepage
+router.get('/category/:id', async (req, res) => {
+  try {
+
+    const productData = await Product.findAll({
+      where: {
+        category_id: req.params.id
+      }
+    });
+    const products = productData.map((product) =>
+    product.get({ plain: true})
+    );
+    // console.log(products)
+
+    res.render('homepage',{
+      products,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // GET a product by id and output it to the product page ending with its respective id
 router.get('/product/:id', async (req, res) => {
 
