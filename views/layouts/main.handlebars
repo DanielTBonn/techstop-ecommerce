@@ -8,8 +8,22 @@
   <header>
     <div class="header-page">
         <h1>E-commerce Tech Store</h1>
-        <nav>
-                <a href="/">Home</a>
+        <div class= "navbar">
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="catergories">Categories
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Phones</a>
+                    <a href="#">Computers</a>
+                    <a href="#">Laptops</a>
+                    <a href="#">Gadgets</a>
+                    <a href="#">TVs</a>
+                    <a href="#">Monitors</a>
+                    <a href="#">Consoles</a>
+                    <a href="#">Accessories</a>
+                </div>
                 <a href="#categories">Categories</a>
                 {{#if logged_in}}
                 <button id="logout" class="btn-no-style">Logout</button>
@@ -17,7 +31,8 @@
                 <a href="/login">Login</a>
                 <a href="/signup">Sign Up</a>
                 {{/if}}
-        </nav>
+            </div>
+        </div>
     </div>
   </header>
   
