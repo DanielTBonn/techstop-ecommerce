@@ -23,7 +23,6 @@ User.hasMany(Review, {
     onDelete: 'CASCADE'
 });
 
-
 // Review belongs to user
 Review.belongsTo(User, {
     foreignKey: 'user_id',
