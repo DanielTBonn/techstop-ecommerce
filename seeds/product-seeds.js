@@ -16,7 +16,7 @@ const productData = [
         price: "823.00",
         description: "A mobile phone that can make and receive calls",
         image: "https://www.imagesrc.com/image",
-        category_id: 1,
+        category_id: 2,
         cart_id: 1                                  
     },
     {
@@ -25,7 +25,7 @@ const productData = [
         price: 800.00,
         description: "device that accepts information (in the form of digitalized data) and manipulates it for some result based on a program, software, or sequence of instructions on how the data is to be processed.",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 3                                  // This should be whatever category it belongs to
     },
     
     {  
@@ -34,7 +34,7 @@ const productData = [
         price: 474.00,
         description: "small mechanical or electronic device with a practical use",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 4                                  // This should be whatever category it belongs to
     },
     {
         id: 4,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
@@ -42,7 +42,7 @@ const productData = [
         price: 1100.00,
         description: "a computer that is portable and suitable for use while traveling.",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 5                                  // This should be whatever category it belongs to
     },
     
     {
@@ -51,7 +51,7 @@ const productData = [
         price: 400.00,
         description: "a device for watching television",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 6                                 // This should be whatever category it belongs to
     },
     
     {
@@ -60,7 +60,7 @@ const productData = [
         price: 250.00,
         description: "an electronic output device which displays images in pictorial form on the screen",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 7                                  // This should be whatever category it belongs to
     },
     
     {
@@ -69,7 +69,7 @@ const productData = [
         price: 95.00,
         description: "a panel of keys used for putting information including letters, words, and numbers into your computer. Mouse— is a hand-operated pointing device. ",
         image: "https://www.imagesrc.com/image",
-        category_id: 1                                  // This should be whatever category it belongs to
+        category_id: 8                                  // This should be whatever category it belongs to
     },
     
     {
