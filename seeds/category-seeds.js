@@ -31,6 +31,7 @@ const categoryData = [
         id: 8,
         category_name: 'Gaming Consoles',
     }
+]
 
 const seedCategories = () => Category.bulkCreate(categoryData);
 
