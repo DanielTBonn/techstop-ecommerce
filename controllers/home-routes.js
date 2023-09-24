@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product, Review } = require('../models');
+const { Category, Product, Review, Cart } = require('../models');
 // const withAuth  = require('../utils/auth')
 
 // GET all blogpost for homepage
@@ -107,6 +107,26 @@ router.get('/user/reviews/:id', async (req, res) => {
   }
     
 })
+
+// GET user cart
+router.get('/user/cart/:id', async (req,res) => {
+  
+  try {
+    req.session.id = req.params.id
+    const cartData = await Cart.findOne({include: {model: Product}, where: {user_id: req.session.id}})
+    console.log(cartData)
+    const cart = cartData.get({ plain: true});
+    console.log(cart)
+
+    res.render('cart', {
+      cart
+    });
+  } catch (err) {
+    console.log("There was an error")
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // GET login page route
 router.get('/login', async (req, res) => {
