@@ -26,6 +26,7 @@
                 </div>
                 <a href="#categories">Categories</a>
                 {{#if logged_in}}
+                <a href="/user/cart/1">Cart</a> {{!-- HREF SHOULD JUST BE `/user/cart` THIS IS FOR TESTING   --}}
                 <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
                 <a href="/login">Login</a>

@@ -73,7 +73,8 @@ router.get('/product/:id', async (req, res) => {
     
     
     res.render('product',{
-      product
+      product,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log("There was an error")
@@ -88,7 +89,8 @@ router.get('/user/reviews/:id', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       where: {
-        user_id: req.params.id
+        user_id: req.params.id,
+        logged_in: req.session.logged_in
       }
     });
 
@@ -98,7 +100,8 @@ router.get('/user/reviews/:id', async (req, res) => {
 
     
     res.render('userreviews', { 
-      reviews
+      reviews,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log("There was an error")
@@ -119,7 +122,8 @@ router.get('/user/cart/:id', async (req,res) => {
     console.log(cart)
 
     res.render('cart', {
-      cart
+      cart,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log("There was an error")
