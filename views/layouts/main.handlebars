@@ -15,17 +15,18 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#">Phones</a>
-                    <a href="#">Computers</a>
-                    <a href="#">Laptops</a>
-                    <a href="#">Gadgets</a>
-                    <a href="#">TVs</a>
-                    <a href="#">Monitors</a>
-                    <a href="#">Consoles</a>
-                    <a href="#">Accessories</a>
+                    <a href="/category/1">Phones</a>
+                    <a href="/category/2">Computers</a>
+                    <a href="/category/3">Laptops</a>
+                    <a href="/category/4">Gadgets</a>
+                    <a href="/category/5">TVs</a>
+                    <a href="/category/6">Monitors</a>
+                    <a href="/category/7">Consoles</a>
+                    <a href="/category/8">Accessories</a>
                 </div>
                 <a href="#categories">Categories</a>
                 {{#if logged_in}}
+                <a href="/user/cart/1">Cart</a> {{!-- HREF SHOULD JUST BE `/user/cart` THIS IS FOR TESTING   --}}
                 <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
                 <a href="/login">Login</a>

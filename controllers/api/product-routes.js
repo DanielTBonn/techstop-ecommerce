@@ -80,23 +80,27 @@ router.post('/', (req, res) => {
     });
 });
 
-// router.put('/addtocart/:id', async (req, res) => {
-//   try {
-//     const productData = await Product.update({
-//       cart_id: req.session.cart_id
-//     },
-//     {
-//       where: {
-//         id: req.body.id
-//       }
-//     });
-    
-//   } catch (err) {
-//     res.status(500).json(err);
-//     console.log("Error occured");
-//     console.log(err);
-//   }
+router.put('/addtocart/:id', async (req, res) => {
+  try {
+    const productData = await Product.update({
+      // cart_id: req.session.cart_id
+      cart_id: 2
 
-// });
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    });
+
+    res.status(200).send(productData)
+    
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Error occured");
+    console.log(err);
+  }
+
+});
 
 module.exports = router;

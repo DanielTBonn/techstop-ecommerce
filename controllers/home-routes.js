@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product, Review } = require('../models');
+const { Category, Product, Review, Cart } = require('../models');
 // const withAuth  = require('../utils/auth')
 
 // GET all blogpost for homepage
@@ -73,7 +73,8 @@ router.get('/product/:id', async (req, res) => {
     
     
     res.render('product',{
-      product
+      product,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log("There was an error")
@@ -88,7 +89,8 @@ router.get('/user/reviews/:id', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       where: {
-        user_id: req.params.id
+        user_id: req.params.id,
+        logged_in: req.session.logged_in
       }
     });
 
@@ -98,7 +100,8 @@ router.get('/user/reviews/:id', async (req, res) => {
 
     
     res.render('userreviews', { 
-      reviews
+      reviews,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log("There was an error")
@@ -107,6 +110,27 @@ router.get('/user/reviews/:id', async (req, res) => {
   }
     
 })
+
+// GET user cart
+router.get('/user/cart/:id', async (req,res) => {
+  
+  try {
+    req.session.id = req.params.id
+    const cartData = await Cart.findOne({include: {model: Product}, where: {user_id: req.session.id}})
+    console.log(cartData)
+    const cart = cartData.get({ plain: true});
+    console.log(cart)
+
+    res.render('cart', {
+      cart,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log("There was an error")
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // GET login page route
 router.get('/login', async (req, res) => {

@@ -23,7 +23,7 @@ router.post('/login', async (req, res) => {
     try {
       // TODO: Add a comment describing the functionality of this expression
       // retrieves the user with a unique email in the database
-      const userData = await User.findOne({ where: { username: req.body.username } });
+      const userData = await User.findOne({ include: {model: Cart}, where: { username: req.body.username } });
   
       // console.log(userData);
       // console.log(userData.username)
