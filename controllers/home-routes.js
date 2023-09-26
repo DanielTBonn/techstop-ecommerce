@@ -115,8 +115,14 @@ router.get('/user/reviews/:id', async (req, res) => {
 router.get('/user/cart/:id', async (req,res) => {
   
   try {
-    req.session.id = req.params.id
-    const cartData = await Cart.findOne({include: {model: Product}, where: {user_id: req.session.id}})
+    // THIS LINE NEEDS TO CHANGE FOR
+    // req.session.id = req.params.id 
+    // 
+    const cartData = await Cart.findOne({include: {model: Product}, where: 
+      {
+        user_id: req.params.id
+      }
+    });
     console.log(cartData)
     const cart = cartData.get({ plain: true});
     console.log(cart)
