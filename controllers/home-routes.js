@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Category, Product, Review, Cart } = require('../models');
+const withAuth = require('../utils/auth');
 // const withAuth  = require('../utils/auth')
 
 // GET all blogpost for homepage
@@ -112,7 +113,7 @@ router.get('/user/reviews/:id', async (req, res) => {
 })
 
 // GET user cart
-router.get('/user/cart/', async (req,res) => {
+router.get('/user/cart/', withAuth, async (req,res) => {
   
   try {
     // THIS LINE NEEDS TO CHANGE FOR
