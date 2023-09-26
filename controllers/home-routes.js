@@ -90,7 +90,6 @@ router.get('/user/reviews/:id', async (req, res) => {
     const reviewData = await Review.findAll({
       where: {
         user_id: req.params.id,
-        logged_in: req.session.logged_in
       }
     });
 
@@ -98,6 +97,7 @@ router.get('/user/reviews/:id', async (req, res) => {
       review.get({ plain: true})
     );
 
+    console.log(reviews)
     
     res.render('userreviews', { 
       reviews,
