@@ -225,6 +225,4 @@ const { Category } = require("../models");
         image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6515/6515261_sd.jpg;maxHeight=640;maxWidth=550",
         category_id: 8,
         }
-        
-    
 ]
