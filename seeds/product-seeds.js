@@ -8,7 +8,7 @@ const productData = [
         description: "Some shoes that are brown.",
         image: "https://theblacktux.com/_next/image?url=https%3A%2F%2Fstatic.theblacktux.com%2Fproducts%2Fshoes%2Fbrown-leather-shoes%2FBrownLeatherShoes_1_1812x1875.jpg%3Fcrop%3D500%3A667&w=3840&q=75",
         category_id: 1,
-        cart_id: 1
+        // cart_id: 1
     },
     {
         id: 9,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
@@ -17,7 +17,7 @@ const productData = [
         description: "A mobile phone that can make and receive calls",
         image: "https://images.samsung.com/us/smartphones/galaxy-z-flip5/images/galaxy-z-flip5-highlights-kv-a.jpg?imbypass=true",
         category_id: 2,
-        cart_id: 1                                  
+        // cart_id: 1                                  
     },
     {
         id: 2,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
