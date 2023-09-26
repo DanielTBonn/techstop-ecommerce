@@ -10,7 +10,7 @@
 <body>
   <header>
     <div class="header-page">
-        <h1><span class="color1">TECH</span> <span class="color2">STOP</span></h1>
+        <a href="/" class="no-underline"><h1><span class="color1">TECH</span> <span class="color2">STOP</span></h1></a>
         <div class= "navbar">
             <a href="/">Home</a>
             <div class="dropdown">
@@ -26,7 +26,7 @@
                 </div>
                 <a href="#categories">Categories</a>
                 {{#if logged_in}}
-                <a href="/user/cart/1">Cart</a> {{!-- HREF SHOULD JUST BE `/user/cart` THIS IS FOR TESTING   --}}
+                <a href="/user/cart">Cart</a> 
                 <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
                 <a href="/login">Login</a>

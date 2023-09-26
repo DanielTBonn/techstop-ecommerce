@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Category, Product, Review, Cart } = require('../models');
+const withAuth = require('../utils/auth');
 // const withAuth  = require('../utils/auth')
 
 // GET all blogpost for homepage
@@ -90,7 +91,6 @@ router.get('/user/reviews/:id', async (req, res) => {
     const reviewData = await Review.findAll({
       where: {
         user_id: req.params.id,
-        logged_in: req.session.logged_in
       }
     });
 
@@ -98,6 +98,7 @@ router.get('/user/reviews/:id', async (req, res) => {
       review.get({ plain: true})
     );
 
+    console.log(reviews)
     
     res.render('userreviews', { 
       reviews,
@@ -112,11 +113,17 @@ router.get('/user/reviews/:id', async (req, res) => {
 })
 
 // GET user cart
-router.get('/user/cart/:id', async (req,res) => {
+router.get('/user/cart/', withAuth, async (req,res) => {
   
   try {
-    req.session.id = req.params.id
-    const cartData = await Cart.findOne({include: {model: Product}, where: {user_id: req.session.id}})
+    // THIS LINE NEEDS TO CHANGE FOR
+    // req.session.id = req.params.id 
+    // 
+    const cartData = await Cart.findOne({include: {model: Product}, where: 
+      {
+        user_id: req.session.user_id
+      }
+    });
     console.log(cartData)
     const cart = cartData.get({ plain: true});
     console.log(cart)

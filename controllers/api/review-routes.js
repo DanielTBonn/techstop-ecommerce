@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Review } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
     try { 
@@ -22,14 +23,9 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try { 
 
-        // req.session.save(() => {
-        //     req.session.user_id = 1;
-        //     req.session.username = 'DanielTBonn'
-            
-        //   });
 
         const reviewData = await Review.create({
                 content: req.body.content,
