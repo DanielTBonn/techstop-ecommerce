@@ -131,3 +131,8 @@ span.color2 {
     background: repeating-linear-gradient(45deg, red, transparent 100px);
 }
 
+.no-underline {
+  text-decoration: none;
+  color: black;
+}
+
