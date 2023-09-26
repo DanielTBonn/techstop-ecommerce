@@ -17,6 +17,18 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
+        const productCartCheck = await ProductCart.findOne({
+            where: {
+                product_id: req.body.product_id,
+                cart_id: req.session.cart_id
+            }
+        });
+
+        if (productCartCheck) {
+            console.log("Item already exists in cart");
+            return;
+        }
+
         const productCartData = await ProductCart.create({
             product_id: req.body.product_id,
             cart_id: req.session.cart_id
