@@ -1,10 +1,10 @@
 .navbar {
     overflow: hidden;
     background-color: #333;
-    font-family: Arial;
+    font-family:'Black Ops One';
   }
   
-  /* Links inside the navbar */
+  
   .navbar a {
     float: left;
     font-size: 16px;
@@ -19,7 +19,7 @@
     overflow: hidden;
   }
   
-  /* Dropdown button */
+  
   .dropdown .categories {
     font-size: 16px;
     border: none;
@@ -27,26 +27,27 @@
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family:'Black Ops One';
+    margin: 0; 
   }
   
-  /* Add a red background color to navbar links on hover */
+  
   .navbar a:hover, .dropdown:hover .categories {
     background-color: red;
   }
   
-  /* Dropdown content (hidden by default) */
+  
   .dropdown-content {
     display: none;
     position: absolute;
+    top: 60px;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
+  
   .dropdown-content a {
     float: none;
     color: black;
@@ -56,12 +57,12 @@
     text-align: left;
   }
   
-  /* Add a grey background color to dropdown links on hover */
+  
   .dropdown-content a:hover {
     background-color: #ddd;
   }
   
-  /* Show the dropdown menu on hover */
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
@@ -73,17 +74,21 @@ nav a {
     text-align: center;
   }
 
-.header-page{
+.header-page {
     background-color: rgba(204, 219, 239, 0.757);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.header-page h1 {
+    font-family: 'Black Ops One';
+    margin-left: 27px;
+}
+
 body {
     margin: auto;
     background-color: rgb(181 177 177 / 20%);
-    font-family: Arial;
 }
 
 
@@ -107,7 +112,7 @@ p {
 
 .product h2 {
     margin-left: 10px;
-
+    font-family: 'Black Ops One';
 }
 
 .btn-no-style {
@@ -119,5 +124,10 @@ p {
     font-size: 100%;
     transition: color 0.1s;
     margin-left: 16px;
-
 }
+
+span.color2 {
+    color: white;
+    background: repeating-linear-gradient(45deg, red, transparent 100px);
+}
+
