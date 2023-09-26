@@ -2,7 +2,6 @@
 const reviewFormHandler = async (event) => {
     event.preventDefault();
 
-    // const name = document.querySelector('#name').value.trim();
     const content = document.querySelector('#review').value.trim();
 
     const currentUrl = await window.location.href;
