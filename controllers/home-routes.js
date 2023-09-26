@@ -112,7 +112,7 @@ router.get('/user/reviews/:id', async (req, res) => {
 })
 
 // GET user cart
-router.get('/user/cart/:id', async (req,res) => {
+router.get('/user/cart/', async (req,res) => {
   
   try {
     // THIS LINE NEEDS TO CHANGE FOR
@@ -120,7 +120,7 @@ router.get('/user/cart/:id', async (req,res) => {
     // 
     const cartData = await Cart.findOne({include: {model: Product}, where: 
       {
-        user_id: req.params.id
+        user_id: req.session.user_id
       }
     });
     console.log(cartData)

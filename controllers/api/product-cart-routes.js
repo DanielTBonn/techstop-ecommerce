@@ -17,16 +17,17 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const productCartData = await ProductCart.create(req.body);
+        const productCartData = await ProductCart.create({
+            product_id: req.body.product_id,
+            cart_id: req.session.cart_id
+        });
         console.log(productCartData);
         res.status(200).send(productCartData);
-
     } catch (err) {
         res.status(500).json(err);
         console.log("Error occured");
         console.log(err);
     }
-
 })
 
 router.delete('/', async (req, res) => {
