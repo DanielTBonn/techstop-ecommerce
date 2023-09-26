@@ -1,9 +1,18 @@
 const router = require('express').Router();
-const { Review } = require('../../models');
+const { User, Review } = require('../../models');
 
 router.get('/', async (req, res) => {
     try { 
-        const reviewData = await Review.findAll();
+        const reviewData = await Review.findAll({
+            include: [
+                { 
+                    model: User,
+                    attributes: [
+                        'username'
+                    ] 
+                }
+            ]
+        });
         res.status(200).json(reviewData);
     } catch (err) {
         res.status(500).json(err);
@@ -15,7 +24,21 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try { 
-        const reviewData = await Review.create(req.body);
+
+        // req.session.save(() => {
+        //     req.session.user_id = 1;
+        //     req.session.username = 'DanielTBonn'
+            
+        //   });
+
+        const reviewData = await Review.create({
+                content: req.body.content,
+                username: req.session.username,
+                user_id: req.session.user_id,
+                product_id: req.body.product_id
+            }
+        );
+
         res.status(200).json(reviewData);
     } catch (err) {
         res.status(500).json(err);

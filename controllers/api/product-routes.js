@@ -9,10 +9,10 @@ router.get('/', async (req, res) => {
     // find all products
     const productData = await Product.findAll({
       // be sure to include its associated Category and Tag data
-    //   include: [
-    //     { model: Category },
-    //     // { model: Tag }
-    // ]
+      include: [
+        { model: Category },
+        // { model: Tag }
+    ]
     });
 
     if (!productData) {
@@ -35,7 +35,10 @@ router.get('/:id', async (req, res) => {
     // find all products
     const productData = await Product.findByPk(req.params.id, {
       // be sure to include its associated Category and Tag data
-      // include: [{ model: Category }, { model: Tag }]
+      include: [
+        { model: Category }
+      // , { model: Tag }
+    ]
     });
 
     if (!productData) {
@@ -75,6 +78,29 @@ router.post('/', (req, res) => {
       console.log(err);
       res.status(400).json(err);
     });
+});
+
+router.put('/addtocart/:id', async (req, res) => {
+  try {
+    const productData = await Product.update({
+      // cart_id: req.session.cart_id
+      cart_id: 2
+
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    });
+
+    res.status(200).send(productData)
+    
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Error occured");
+    console.log(err);
+  }
+
 });
 
 module.exports = router;

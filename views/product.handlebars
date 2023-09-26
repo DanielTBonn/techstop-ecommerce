@@ -1,13 +1,17 @@
+{{#if product}}
+{{> product-details}}
+{{/if}}
+<br>
 <form class="review-form" id="reviewForm" >
-        <div class="form-group">
+        {{!-- <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-        </div>
+        </div> --}}
 
-        <div class="form-group">
+        {{!-- <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-        </div>
+        </div> --}}
 
         <div class="form-group">
             <label for="rating">Rating:</label>
@@ -35,10 +39,10 @@
             <p>{{review}}</p>
         </div>
     </script>
-<script src="./js/reviews.js"></script>
+<script src="/js/reviews.js"></script>
 
 <section class="review-list">
-    {{#each reviews as |review|}}
+    {{#each product.reviews as |review|}}
     {{> review-details }}
     {{/each}}
 </section>
