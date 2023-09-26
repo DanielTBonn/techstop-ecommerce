@@ -34,7 +34,7 @@ router.delete('/', async (req, res) => {
         const productCartData = await ProductCart.destroy({
             where: {
             product_id: req.body.product_id,
-            cart_id: req.body.cart_id
+            cart_id: req.session.cart_id
         }
         });
 
