@@ -3,19 +3,38 @@ const { Category, Product, Review, Cart } = require('../models');
 const withAuth = require('../utils/auth');
 // const withAuth  = require('../utils/auth')
 
-// GET all blogpost for homepage
+// GET products for homepage
 router.get('/', async (req, res) => {
   try {
 
+    // GET category 7 product data
+    const productData7 = await Product.findAll({
+      include: [ {model: Category} ],
+      where: {
+        category_id: 7
+      }
+    });
 
-    const productData = await Product.findAll();
-    const products = productData.map((product) =>
-    product.get({ plain: true})
+    const products7 = productData7.map((product) =>
+      product.get({ plain: true})
     );
-    // console.log(products)
+
+
+    // GET category 8 product data
+    const productData8 = await Product.findAll({
+      include: [ {model: Category} ],
+      where: {
+        category_id: 8
+      }
+    });
+
+    const products8 = productData8.map((product) =>
+      product.get({ plain: true})
+    );
 
     res.render('homepage',{
-      products,
+      products7,
+      products8,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -38,7 +57,7 @@ router.get('/category/:id', async (req, res) => {
     );
     // console.log(products)
 
-    res.render('homepage',{
+    res.render('categories',{
       products,
       logged_in: req.session.logged_in
     });

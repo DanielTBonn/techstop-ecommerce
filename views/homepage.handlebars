@@ -1,7 +1,20 @@
 <section class="product-list">
-    {{#each products as |product|}} 
-    {{> homepage-details}}
-    {{/each}}
+    {{#if products1}}
+    {{!-- {{rename products8 products}} --}}
+        {{> homepage-details1}}
+    {{/if}}
+</section>
+
+<section class="product-list">
+    {{#if products7}} 
+    {{> homepage-details7}}
+    {{/if}}
+</section>
+
+<section class="product-list">
+    {{#if products8}} 
+    {{> homepage-details8}}
+    {{/if}}
 </section>
 
 <script src="/js/addToCart.js"></script>
