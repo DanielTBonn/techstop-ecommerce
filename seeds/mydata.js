@@ -63,7 +63,7 @@ product_name:"Macbook Pro 14",
 price: 1999.99,
 description:"The 14-inch MacBook Pro with M2 Pro and M2 Max takes power and speed to the next level",
 image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455369_sd.jpg;maxHeight=640;maxWidth=550"
-category_id:1,
+category_id: 2,
 
 product_name:""
 price: 

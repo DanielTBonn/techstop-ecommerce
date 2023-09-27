@@ -8,19 +8,32 @@ router.get('/', async (req, res) => {
   try {
 
 
-    const productData = await Product.findAll({
+    const productData7 = await Product.findAll({
+      include: [ {model: Category} ],
+      where: {
+        category_id: 7
+      }
+    });
+
+    const products7 = productData7.map((product) =>
+      product.get({ plain: true})
+    );
+
+
+    // GET category 8 product data
+    const productData8 = await Product.findAll({
       include: [ {model: Category} ],
       where: {
         category_id: 8
       }
     });
-    const products8 = productData.map((product) =>
-    product.get({ plain: true})
-    );
-    // console.log(products)
-    console.log(products8)
 
-    res.render('homepage2',{
+    const products8 = productData8.map((product) =>
+      product.get({ plain: true})
+    );
+
+    res.render('homepage',{
+      products7,
       products8,
       logged_in: req.session.logged_in
     });
@@ -44,7 +57,7 @@ router.get('/category/:id', async (req, res) => {
     );
     // console.log(products)
 
-    res.render('homepage',{
+    res.render('categories',{
       products,
       logged_in: req.session.logged_in
     });
