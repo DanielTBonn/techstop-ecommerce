@@ -3,19 +3,25 @@ const { Category, Product, Review, Cart } = require('../models');
 const withAuth = require('../utils/auth');
 // const withAuth  = require('../utils/auth')
 
-// GET all blogpost for homepage
+// GET products for homepage
 router.get('/', async (req, res) => {
   try {
 
 
-    const productData = await Product.findAll();
-    const products = productData.map((product) =>
+    const productData = await Product.findAll({
+      include: [ {model: Category} ],
+      where: {
+        category_id: 8
+      }
+    });
+    const products8 = productData.map((product) =>
     product.get({ plain: true})
     );
     // console.log(products)
+    console.log(products8)
 
-    res.render('homepage',{
-      products,
+    res.render('homepage2',{
+      products8,
       logged_in: req.session.logged_in
     });
   } catch (err) {

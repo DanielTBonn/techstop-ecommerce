@@ -9,5 +9,8 @@
     "handlebars": "^4.7.8",
     "mysql2": "^3.6.1",
     "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
