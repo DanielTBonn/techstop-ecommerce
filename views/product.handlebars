@@ -1,25 +1,19 @@
 {{#if product}}
 {{> product-details}}
 {{/if}}
-<form class="review-form" id="reviewForm" >
 
-        {{!-- <div class="form-group">
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating" required>
-                <option value="5">5 stars</option>
-                <option value="4">4 stars</option>
-                <option value="3">3 stars</option>
-                <option value="2">2 stars</option>
-                <option value="1">1 star</option>
-            </select>
-        </div> --}}
-
-        <div class="form-group">
-            <label for="review">Review:</label>
-            <textarea class="body-content" id="review" name="review" rows="4" required></textarea>
+    <form class="review-form" id="reviewForm" >
+        <div class="w-4/5 ml-5 mt-5">
+            <div class="form-group">
+                {{!-- <label for="review">Review:</label>
+                <div style="float: left; width: 80%;" class="mt-5 px-5">        
+                    <textarea class="body-content w-100 h-100" style="width: 100%; max-width: 100%;" id="review" name="review" required></textarea>
+                </div> --}}
+                <label for="review" class="block mb-2 text-base font-medium text-gray-900 dark:text-black text-lg">Write a Review:</label>
+                <textarea id="review" name="review" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a review here..."></textarea>
+            </div>
+            <button class="h-10 px-5 mt-5 font-semibold rounded-md bg-black text-white text-sm" type="submit">Submit Review</button>
         </div>
-
-        <button type="submit">Submit Review</button>
     </form>
 
     <script id="review-template" type="text/x-handlebars-template">
@@ -29,14 +23,23 @@
             <p>{{review}}</p>
         </div>
     </script>
+
 <script src="/js/reviews.js"></script>
 
 
 
-<section class="review-list">
-    {{#each product.reviews as |review|}}
-    {{> review-details }}
-    {{/each}}
-</section>
+<div class="review-header m-auto w-50 p-10 border-solid-black">
+    {{!-- {{#if products}} --}}
+    <h3 class="block mb-2 text-base font-medium text-gray-900 dark:text-black text-lg">Review Section</h3>
+    <div class="border-solid border-2 border-gray-700"></div>
+    <section class="review-list">
+        {{#each product.reviews as |review|}}
+        {{> review-details }}
+        {{/each}}
+    </section>
+    {{!-- {{else}} --}}
+        {{!-- <p>None</p>
+    {{/if}} --}}
+</div>
 
 

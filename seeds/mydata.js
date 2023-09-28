@@ -72,9 +72,7 @@ category_id: 1,
 product_name:"Macbook Pro 14",
 price: 1999.99,
 description:"The 14-inch MacBook Pro with M2 Pro and M2 Max takes power and speed to the next level",
-
-image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455369_sd.jpg;maxHeight=640;maxWidth=550"
-
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455369_sd.jpg;maxHeight=640;maxWidth=550",
 category_id: 2,
 },
 {
@@ -120,7 +118,7 @@ image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477
 category_id: 2,
 },
 {
-product_name: "Acer - Aspire 3 Thin & Light Laptop - 15.6' Full HD IPS Touch Display - AMD Ryzen 5 7520U - 8GB LPDDR5 - 512GB SSD - Wi-Fi 6 - Steam Blue"
+product_name: "Acer - Aspire 3 Thin & Light Laptop - 15.6' Full HD IPS Touch Display - AMD Ryzen 5 7520U - 8GB LPDDR5 - 512GB SSD - Wi-Fi 6 - Steam Blue",
 price: 379.99,
 description: "Choose the ready-to-go Aspire 3 with the latest Ryzen 7000 Series Processors made for practical multitasking and productivity.",
 image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530235_sd.jpg;maxHeight=640;maxWidth=550",
@@ -218,7 +216,7 @@ image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6509/6509
 category_id: 4,
 },
 {
-product_name: "Dell - Inspiron 16.0' 2-in-1 Touch Laptop - AMD Ryzen 5 7530U - 16GB Memory - 512GB SSD - Dark River Blue"
+product_name: "Dell - Inspiron 16.0' 2-in-1 Touch Laptop - AMD Ryzen 5 7530U - 16GB Memory - 512GB SSD - Dark River Blue",
 price: 849.99,
 description: "Feel your content unfold around you with the Inspiron 16 2-in-1 Laptop's powerful up-firing speakers, front-facing speakers and beautiful 16-inch display.",
 image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6539/6539906_sd.jpg;maxHeight=640;maxWidth=550",

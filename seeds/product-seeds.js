@@ -1,85 +1,325 @@
 const { Product } = require('../models');
 
 const productData = [
-    {
-        id: 1,
-        product_name: 'Brown Shoes',
-        price: 1.00,
-        description: "Some shoes that are brown.",
-        image: "https://theblacktux.com/_next/image?url=https%3A%2F%2Fstatic.theblacktux.com%2Fproducts%2Fshoes%2Fbrown-leather-shoes%2FBrownLeatherShoes_1_1812x1875.jpg%3Fcrop%3D500%3A667&w=3840&q=75",
-        category_id: 1,
-        // cart_id: 1
-    },
-    {
-        id: 9,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Phones",
-        price: "823.00",
-        description: "A mobile phone that can make and receive calls",
-        image: "https://images.samsung.com/us/smartphones/galaxy-z-flip5/images/galaxy-z-flip5-highlights-kv-a.jpg?imbypass=true",
-        category_id: 2,
-        // cart_id: 1                                  
-    },
-    {
-        id: 2,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Computers",
-        price: 800.00,
-        description: "device that accepts information (in the form of digitalized data) and manipulates it for some result based on a program, software, or sequence of instructions on how the data is to be processed.",
-        image: "https://i.dell.com/sites/csimages/Product_Imagery/all/prod-2579-desktop-xps-8960-black-rf-800x550.png",
-        category_id: 3                                  // This should be whatever category it belongs to
-    },
+    // {
+    //     id: 1,
+    //     product_name: 'Brown Shoes',
+    //     price: 1.00,
+    //     description: "Some shoes that are brown.",
+    //     image: "https://theblacktux.com/_next/image?url=https%3A%2F%2Fstatic.theblacktux.com%2Fproducts%2Fshoes%2Fbrown-leather-shoes%2FBrownLeatherShoes_1_1812x1875.jpg%3Fcrop%3D500%3A667&w=3840&q=75",
+    //     category_id: 1,
+    //     // cart_id: 1
+    // },
+    // {
+    //     id: 9,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Phones",
+    //     price: "823.00",
+    //     description: "A mobile phone that can make and receive calls",
+    //     image: "https://images.samsung.com/us/smartphones/galaxy-z-flip5/images/galaxy-z-flip5-highlights-kv-a.jpg?imbypass=true",
+    //     category_id: 2,
+    //     // cart_id: 1                                  
+    // },
+    // {
+    //     id: 2,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Computers",
+    //     price: 800.00,
+    //     description: "device that accepts information (in the form of digitalized data) and manipulates it for some result based on a program, software, or sequence of instructions on how the data is to be processed.",
+    //     image: "https://i.dell.com/sites/csimages/Product_Imagery/all/prod-2579-desktop-xps-8960-black-rf-800x550.png",
+    //     category_id: 3                                  // This should be whatever category it belongs to
+    // },
     
-    {  
-        id: 3,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Gadgets",
-        price: 474.00,
-        description: "small mechanical or electronic device with a practical use",
-        image: "https://i.ytimg.com/vi/TX9qSaGXFyg/sddefault.jpg",
-        category_id: 4                                  // This should be whatever category it belongs to
-    },
-    {
-        id: 4,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Laptops",
-        price: 1100.00,
-        description: "a computer that is portable and suitable for use while traveling.",
-        image: "https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UY218_.jpg",
-        category_id: 5                                  // This should be whatever category it belongs to
-    },
+    // {  
+    //     id: 3,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Gadgets",
+    //     price: 474.00,
+    //     description: "small mechanical or electronic device with a practical use",
+    //     image: "https://i.ytimg.com/vi/TX9qSaGXFyg/sddefault.jpg",
+    //     category_id: 4                                  // This should be whatever category it belongs to
+    // },
+    // {
+    //     id: 4,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Laptops",
+    //     price: 1100.00,
+    //     description: "a computer that is portable and suitable for use while traveling.",
+    //     image: "https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UY218_.jpg",
+    //     category_id: 5                                  // This should be whatever category it belongs to
+    // },
     
-    {
-        id: 5,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "TVs",
-        price: 400.00,
-        description: "a device for watching television",
-        image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501902_sd.jpg;maxHeight=2000;maxWidth=2000",
-        category_id: 6                                 // This should be whatever category it belongs to
-    },
+    // {
+    //     id: 5,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "TVs",
+    //     price: 400.00,
+    //     description: "a device for watching television",
+    //     image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501902_sd.jpg;maxHeight=2000;maxWidth=2000",
+    //     category_id: 6                                 // This should be whatever category it belongs to
+    // },
     
-    {
-        id: 6,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Computer Monitors",
-        price: 250.00,
-        description: "an electronic output device which displays images in pictorial form on the screen",
-        image: "https://dlcdnwebimgs.asus.com/gain/D99794B7-46F5-46F6-8169-D7CE91495BC6/w717/h525",
-        category_id: 7                                  // This should be whatever category it belongs to
-    },
+    // {
+    //     id: 6,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Computer Monitors",
+    //     price: 250.00,
+    //     description: "an electronic output device which displays images in pictorial form on the screen",
+    //     image: "https://dlcdnwebimgs.asus.com/gain/D99794B7-46F5-46F6-8169-D7CE91495BC6/w717/h525",
+    //     category_id: 7                                  // This should be whatever category it belongs to
+    // },
     
-    {
-        id: 7,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Key Boards and Mice",
-        price: 95.00,
-        description: "a panel of keys used for putting information including letters, words, and numbers into your computer. Mouse— is a hand-operated pointing device. ",
-        image: "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/pebble-keys-2-k380s/gallery/pebble-keys-2-k380s-top-tonal-graphite-gallery-us.png?v=1",
-        category_id: 8                                  // This should be whatever category it belongs to
-    },
+    // {
+    //     id: 7,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Key Boards and Mice",
+    //     price: 95.00,
+    //     description: "a panel of keys used for putting information including letters, words, and numbers into your computer. Mouse— is a hand-operated pointing device. ",
+    //     image: "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/pebble-keys-2-k380s/gallery/pebble-keys-2-k380s-top-tonal-graphite-gallery-us.png?v=1",
+    //     category_id: 8                                  // This should be whatever category it belongs to
+    // },
     
+    // {
+    //     id: 8,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
+    //     product_name: "Gaming Consoles",
+    //     price: 400.00,
+    //     description: "a piece of electronic equipment for playing games on",
+    //     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/GameCube-Console-Set.png/1024px-GameCube-Console-Set.png",
+    //     category_id: 1                                  // This should be whatever category it belongs to
+    // },
+
+    // Beginning of mydata.js
     {
-        id: 8,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-        product_name: "Gaming Consoles",
-        price: 400.00,
-        description: "a piece of electronic equipment for playing games on",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/GameCube-Console-Set.png/1024px-GameCube-Console-Set.png",
-        category_id: 1                                  // This should be whatever category it belongs to
-    },
+        product_name:"Iphone 15",
+price: 829.99,
+description:"iPhone 15 brings you Dynamic Island, a 48MP Main camera, and USB-C—all in a durable color-infused glass and aluminum design. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6417/6417993_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Iphone 14",
+price: 629.99,
+description:"With the most impressive dual-camera system on iPhone. Capture stunning photos in low light and bright light. Get peace of mind with groundbreaking safety features. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6504/6504794_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Iphone 13",
+price: 579.99,
+description:" The most advanced dual-camera system ever on iPhone. Lightning-fast A15 Bionic chip. A big leap in battery life. Durable design. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6417/6417788_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Iphone 12",
+price: 554.99,
+description:" 5G to download movies on the fly and stream high-quality video.¹ Beautifully bright 6.1-inch Super Retina XDR display.",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6417/6417831_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Samsung Galaxy s23",
+price: 1199.99,
+description:"S Series has a legacy of pushing the boundaries of what a smartphone can do. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529723_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Samsung Galaxy s22",
+price: 699.99,
+description:"Galaxy S22 is redefining the epic standard - both for what a smartphone can do with video and for what you can communicate, create, and experience with it",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494417_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Samsung Galaxy s21",
+price: 399.99,
+description:"Samsung Galaxy S21 FE 5G is jam-packed with features that help you get more out of whatever you're into",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6465/6465024cv18d.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Galaxy Note 20",
+price: 499.99,
+description:"Galaxy Note20 Ultra 5G connect you to everything you love at unprecedented speeds. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6533/6533176_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Samsung Galaxy s23 Ultra",
+price: 1379.99,
+description:"Galaxy S23 Ultra is more than the next big step in mobile tech. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529724_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Iphone 15 Pro Max",
+price: 1099.99,
+description:"iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever. ",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525424_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 1,
+},
+{
+product_name:"Macbook Pro 14",
+price: 1999.99,
+description:"The 14-inch MacBook Pro with M2 Pro and M2 Max takes power and speed to the next level",
+image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455369_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name:"HP - ENVY Desktop - Intel Core i7 - 16GB Memory - 1TB SSD - Black",
+price: 799.99,
+description: "Fuel your creativity. Experience the power and performance of an Intel processor that's designed to meet your creation needs. Render, edit, and stream better than ever before.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6532/6532244_sd.jpg;maxHeight=2000;maxWidth=2000",
+category_id: 2,
+},
+{
+product_name: "HP - 15.6' Touch-Screen Laptop - Intel Core i3 - 8GB Memory - 256GB SSD - Silver",
+price: 329.99,
+description: "Do more from anywhere. All-day long. Designed to keep you productive and entertained from anywhere, the HP 15.6-inch Laptop PC combines long lasting battery life with a thin and portable, microedge bezel design.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6550/6550428_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name: "HP - 24' All-In-One - AMD Ryzen 3 - 8GB Memory - 256GB SSD - Jet Black",
+price: 449.99,
+description: "Solid Performance: Getting things done is easy and fast with the power of an AMD processor, Wi-fi technology, and advanced graphics.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6516/6516380_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name: "MacBook Air 13.3' Laptop - Apple M1 chip - 8GB Memory - 256GB SSD - Gold",
+price: 749.99,
+description: "Apple's thinnest and lightest notebook gets supercharged with the Apple M1 chip. Tackle your projects with the blazing-fast 8-core CPU. Take graphics-intensive apps and games to the next level with the 7-core GPU.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418599_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name: "HP - Victus 15.6' Full HD 144Hz Gaming Laptop - Intel Core i5-13420H - 8GB Memory - NVIDIA GeForce RTX 3050 - 512GB SSD - Performance Blue",
+price: 599.99,
+description: "The HP Victus Laptop is made for peak PC gaming. This sleek machine touts a 13th Gen Intel Core processor¹ and a modern graphics card.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6535/6535505_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name: "HP - 24' Touch-Screen All-In-One - Intel Core i3 - 8GB Memory - 512GB SSD - Snow White",
+price: 599.99,
+description: "Built for tomorrow: Designed with a panel you can remove in three simple steps, easily upgrade your hardware to ensure you always have the power to get things done.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477672_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name: "Acer - Aspire 3 Thin & Light Laptop - 15.6' Full HD IPS Touch Display - AMD Ryzen 5 7520U - 8GB LPDDR5 - 512GB SSD - Wi-Fi 6 - Steam Blue",
+price: 379.99,
+description: "Choose the ready-to-go Aspire 3 with the latest Ryzen 7000 Series Processors made for practical multitasking and productivity.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530235_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 2,
+},
+{
+product_name: "Apple - AirTag - Silver",
+price: 29.00,
+description: "AirTag. Keep track of your keys, wallet, luggage, backpack, and more, all in the Find My app. Play a sound on the built-in speaker, or say 'Hey Siri, find my gym bag.' With select iPhone models, Precision Finding can lead you right to your nearby AirTag.1 If it's further away, hundreds of millions of Apple devices in the Find My network can help track it down. All anonymously and encrypted for privacy.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6461/6461348_rd.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "Belkin - 3-in-1 Wireless Charger - Fast Charging Stand for iPhone, Watch & AirPods - Qi-Certified Charger - Case Compatible - White",
+price: 93.99,
+description: "The Belkin MagSafe 3-in-1 Wireless Charging Pad is the perfect way to keep your devices charged and ready to go.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6403/6403050_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "iOttie - Velox Magnetic Air Vent Mount for MagSafe Compatible Phones - Dark Blue",
+price: 24.95,
+description: "The Velox Air Vent mount is a magnetic phone mount for MagSafe compatible iPhone series. Just place your device against the Velox mount, and it will snap into place in perfect alignment for a secure hold.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6489/6489035_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "Best Buy essentials™ - Female USB-C to Male USB Adapter (2-Pack) - White",
+price: 9.99,
+description: "Technology is always changing — don't get caught without a way to connect old devices to new ones.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6522/6522045ld.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "OtterBox - Commuter Series Hard Shell for MagSafe for Apple iPhone 15 Pro - Black",
+price: 44.95,
+description: "Get moving with Commuter Series for MagSafe for the Apple iPhone 15 Pro, the slim MagSafe phone case. Its two-piece design delivers dependable protection when you’re on the move, and a port protector stops dirt from creeping in. Plus, built-in magnets click securely to MagSafe chargers and accessories.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6548/6548444_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "OtterBox - Commuter Series Hard Shell for Samsung Galaxy S23 Ultra - Black",
+price: 29.99,
+description: "Get moving with Commuter Series for the Samsung Galaxy S23 Ultra, the thin phone case that keeps your phone safe from drops and bumps.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525858_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "Insignia™ - Mouse Pad with Memory Foam Wrist Rest - Black",
+price: 14.99,
+description: "With an integrated memory foam wrist rest, this Insignia™ NS-PNP5002 mouse pad delivers comfort and support for your wrist to prevent fatigue during extended computer sessions. The nonslip rubber backing offers reliable stability.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/7536/7536034_sa.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "SteelSeries - QcK Cloth Gaming Mouse Pad (XXL) - Black",
+price: 23.99,
+description: "Beat the competition with this SteelSeries QcK XXL mouse pad. The sensitivity of this mouse pad transfers every motion to the screen, and its generous size ensures your mouse never slides off and onto the table. The surface of this SteelSeries QcK XXL mouse pad is nearly friction-free to keep your focus on the game.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5637/5637211_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 3,
+},
+{
+product_name: "Lenovo - Ideapad 1 15.6 HD Laptop - Athlon Silver 7120U with 4GB Memory - 128GB SSD - Cloud Grey",
+price: 199.99,
+description: "Browse, explore and connect with confidence on the Lenovo IdeaPad 1 powered by an AMD Athlon Silver proccessor.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531746_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "HP - Victus 15.6' Full HD 144Hz Gaming Laptop - Intel Core i5-13420H - 8GB Memory - NVIDIA GeForce RTX 3050 - 512GB SSD - Performance Blue",
+price: 599.99,
+description: "The HP Victus Laptop is made for peak PC gaming. This sleek machine touts a 13th Gen Intel Core processor¹ and a modern graphics card.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6535/6535505_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "ASUS - Vivobook 16' Laptop - AMD Ryzen 7 5800HS with 12GB Memory - 512GB SSD - Quiet Blue - Quiet Blue",
+price: 479.99,
+description: "Make your world shine with ASUS Vivobook 16X, the feature-packed laptop with a brilliant display.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6535/6535990_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "Acer - Chromebook 314 Laptop-14 Full HD Touch IPS - 4GB LPDDR4-64GB eMMC- Wi-Fi 5 - Charcoal Black",
+price: 169.00,
+description: "The Acer Chromebook 314 is a productivity rock star with an immersive 14-inch Full HD IPS touch display that's designed for working in bright-light conditions.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6529/6529399_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "MacBook Air 13.6' Laptop - Apple M2 chip - 8GB Memory - 256GB SSD - Midnight",
+price: 899.00,
+description: "Supercharged by the next-generation M2 chip, the redesigned MacBook Air combines incredible performance and up to 18 hours of battery life into its strikingly thin aluminum enclosure.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6509/6509650_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "Dell - Inspiron 16.0' 2-in-1 Touch Laptop - AMD Ryzen 5 7530U - 16GB Memory - 512GB SSD - Dark River Blue",
+price: 849.99,
+description: "Feel your content unfold around you with the Inspiron 16 2-in-1 Laptop's powerful up-firing speakers, front-facing speakers and beautiful 16-inch display.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6539/6539906_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "HP - 14' Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Jet Black",
+price: 169.99,
+description: "Take it anywhere. See more. With its thin and light design, 6.5 mm micro-edge bezel display, and 79% screen to body ratio - take this PC anywhere and see and do more.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6499/6499753_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
+{
+product_name: "GIGABYTE - AORUS 15.6 144Hz Gaming Laptop FHD - Intel i5-13500H - NVIDIA GeForce RTX 4050 - 512GB SSD",
+price: 799.99,
+description: "AORUS 15 redefines high-end gaming laptops. Combining powerful performance and mobility with the latest 13th Gen Intel Core Processor H-Series and NVIDIA GeForce RTX 40 Series Laptop GPUs, powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
+image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534579_sd.jpg;maxHeight=640;maxWidth=550",
+category_id: 4,
+},
 
     // Beginning of electronics-seeds
     {
