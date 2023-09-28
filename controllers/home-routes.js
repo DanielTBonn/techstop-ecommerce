@@ -243,7 +243,7 @@ router.get('/login', async (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login2');
 });
 
 // GET signup page route

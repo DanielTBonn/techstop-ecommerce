@@ -1,8 +1,11 @@
-    <div class="product-card">
+    <div class="product-card" class="flex mt-5">
         <div class="product-card-header">
            <h2>{{product_name}}</h2> 
         </div>
-        <img src="{{image}}">
+        <div>
+            <img src="{{image}}" class="m">
+
+        </div>
         <div class="card-body">
         <p>Price: ${{price}}</p>
         <button class="btn-remove" id="btn-remove" data-id="{{id}}">Remove from Cart</button>
