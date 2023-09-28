@@ -18,8 +18,18 @@ const userData = [
     },
     {
         id: 4,
-        username: 'testuser',
-        password: 'testpass'
+        username: 'ericV',
+        password: 'password'
+    },
+    {
+        id: 5,
+        username: 'abdulAl',
+        password: 'password'
+    },
+    {
+        id: 6,
+        username: 'chrisD',
+        password: 'password'
     }
 ]
 
