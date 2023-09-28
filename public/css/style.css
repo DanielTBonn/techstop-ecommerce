@@ -1,8 +1,8 @@
 .navbar {
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #333;
     font-family:'Black Ops One';
-    width: 49%;
+    /* width: 25%; */
   }
   
   
@@ -12,11 +12,18 @@
     color: white;
     text-align: center;
     padding: 14px 16px;
+
     text-decoration: none;
+  }
+
+  .navbar-ul {
+    margin-right: 1rem;
   }
   
   
-  /* .navbar a:hover, .dropdown:hover  */
+  .navbar a:hover, 
+  .dropdown:hover, 
+  #logout:hover,
   .categories {
     background-color: red;
     cursor: pointer;
@@ -145,48 +152,34 @@ li {
    }
 
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
+.dropdown-item:hover {
+    background-color: #f2f2f2;
+}
 
 
 .image-container {
