@@ -1,5 +1,32 @@
-{{#each cart.products as |product|}}
-{{> cart-details}}
-{{/each}}
+
+
+    {{#each cart.products as |product|}}
+    {{> cart-details}}
+    {{/each}}
+
+{{#if cart.products}}
+    <div class="flex justify-end mb-5 mr-5" >
+        <div class="flex-col">
+            <p id="cart-total" class="text-xl font-bold">Total Price: $<span id="total-price">0</span></p>
+            <a href="/demo" class=""><button id="btn-buy" class="btn-buy w-full block px-3 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded-mb">Buy All</button></a>
+        </div>
+    </div>
+{{else}}
+
+<div class="min-h-screen flex justify-center items-center"> 
+
+<div class="demo-page grid grid-cols-4 gap-4 ">
+    <div class="col-start-2 col-span-2">
+        <h1 class="text-3xl font-bold">No Items in Cart</h1>
+    </div>
+    <div class="col-start-2 col-span-2 text-xl">
+        <p>
+            Please continue shopping if you would like to buy items from your cart!
+        </p>
+    </div>
+</div>
+</div>
+{{/if}}
 
 <script src="/js/removeFromCart.js"></script>
+<script src="/js/getTotalPrice.js"></script>
