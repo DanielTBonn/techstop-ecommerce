@@ -7,6 +7,78 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
 
+ // GET category 1 product data
+ const productData1 = await Product.findAll({
+  include: [ {model: Category} ],
+  where: {
+    category_id: 1
+  }
+});
+
+const products1 = productData1.map((product) =>
+  product.get({ plain: true})
+);
+
+ // GET category 2 product data
+ const productData2 = await Product.findAll({
+  include: [ {model: Category} ],
+  where: {
+    category_id: 2
+  }
+});
+
+const products2 = productData2.map((product) =>
+  product.get({ plain: true})
+);
+
+ // GET category 3 product data
+ const productData3 = await Product.findAll({
+  include: [ {model: Category} ],
+  where: {
+    category_id: 3
+  }
+});
+
+const products3 = productData3.map((product) =>
+  product.get({ plain: true})
+);
+
+ // GET category 4 product data
+ const productData4 = await Product.findAll({
+  include: [ {model: Category} ],
+  where: {
+    category_id: 4
+  }
+});
+
+const products4 = productData4.map((product) =>
+  product.get({ plain: true})
+);
+
+ // GET category 5 product data
+ const productData5 = await Product.findAll({
+  include: [ {model: Category} ],
+  where: {
+    category_id: 5
+  }
+});
+
+const products5 = productData5.map((product) =>
+  product.get({ plain: true})
+);
+
+ // GET category 6 product data
+ const productData6 = await Product.findAll({
+  include: [ {model: Category} ],
+  where: {
+    category_id: 6
+  }
+});
+
+const products6 = productData6.map((product) =>
+  product.get({ plain: true})
+);
+
     // GET category 7 product data
     const productData7 = await Product.findAll({
       include: [ {model: Category} ],
