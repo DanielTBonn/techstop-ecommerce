@@ -22,6 +22,20 @@ const reviewData = [
         user_id: 1,
         product_id: 1
     },
+    {
+        id: 3,
+        content: `This TV isn't big enough`,
+        username: 'chrisD',
+        user_id: 6,
+        product_id: 35
+    },
+    {
+        id: 3,
+        content: `This TV isn't big enough`,
+        username: 'chrisD',
+        user_id: 6,
+        product_id: 35
+    },
 ]
 
 const seedReviews = () => Review.bulkCreate(reviewData);
