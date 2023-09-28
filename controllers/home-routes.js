@@ -104,7 +104,13 @@ const products6 = productData6.map((product) =>
       product.get({ plain: true})
     );
 
-    res.render('homepage',{
+    res.render('homepage', {
+      products1,
+      products2,
+      products3,
+      products4,
+      products5,
+      products6,
       products7,
       products8,
       logged_in: req.session.logged_in
