@@ -7,6 +7,12 @@ SO THAT I can find new tech items, request to purchase, and leave reviews
 ## Acceptance Criteria
 
 GIVEN an ecommerce based website,
+WHEN I view the file structure,
+THEN it should follow the MVC-paradigm,
+WHEN I see how the data is stored,
+THEN I see it is in the form of sql database and is properly associated,
+WHEN I see how the pages are rendered,
+THEN I see that the views are made by handlebars being routed by the controllers,
 WHEN I visit the site for the first time,
 THEN I am presented with a homepage, which includes existing products with a name, picture, price, and add to cart button
 WHEN I want to navigate through the website 
