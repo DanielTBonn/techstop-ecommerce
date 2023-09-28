@@ -3,6 +3,7 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Review = require('./Review');
 const Cart = require('./Cart');
+const ProductCart = require('./ProductCart');
 
 
 // Products belongsTo Category
@@ -48,8 +49,15 @@ Cart.belongsTo(User, {
 });
 
 // Cart will contain many products
-Cart.hasMany(Product, {
+Cart.belongsToMany(Product, {
+    through: ProductCart,
     foreignKey: 'cart_id',
+    onDelete: 'CASCADE'
+});
+
+Product.belongsToMany(Cart, { 
+    through: ProductCart,
+    foreignKey: 'product_id',
     onDelete: 'CASCADE'
 });
 
@@ -58,5 +66,6 @@ module.exports = {
     Product,
     Category,
     Review,
-    Cart
+    Cart,
+    ProductCart
 }

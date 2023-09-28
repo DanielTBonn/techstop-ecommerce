@@ -1,7 +1,7 @@
 .navbar {
     overflow: hidden;
     background-color: #333;
-    font-family: Arial;
+    font-family:'Black Ops One';
   }
   
   
@@ -27,7 +27,7 @@
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; 
+    font-family:'Black Ops One';
     margin: 0; 
   }
   
@@ -40,6 +40,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
+    top: 60px;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -73,17 +74,21 @@ nav a {
     text-align: center;
   }
 
-.header-page{
+.header-page {
     background-color: rgba(204, 219, 239, 0.757);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.header-page h1 {
+    font-family: 'Black Ops One';
+    margin-left: 27px;
+}
+
 body {
     margin: auto;
     background-color: rgb(181 177 177 / 20%);
-    font-family: Arial;
 }
 
 
@@ -107,8 +112,7 @@ p {
 
 .product h2 {
     margin-left: 10px;
-}
-
+    font-family: 'Black Ops One';
 }
 
 .btn-no-style {
@@ -121,3 +125,14 @@ p {
     transition: color 0.1s;
     margin-left: 16px;
 }
+
+span.color2 {
+    color: white;
+    background: repeating-linear-gradient(45deg, red, transparent 100px);
+}
+
+.no-underline {
+  text-decoration: none;
+  color: black;
+}
+

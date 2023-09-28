@@ -1,6 +1,7 @@
+[
 {
     id: 1,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-    product_name = "Phones",
+    product_name: "Phones",
     price: "823.00",
     description: "A mobile phone that can make and receive calls",
     image: "https://www.apple.com/lae/iphone/home/images/meta/iphone__ky2k6x5u6vue_og.png",
@@ -63,9 +64,11 @@
 
 {
     id: 8,                                          // Auto increment means we dont need this, its just so we can easily keep track of the items we create 
-    product_name = "Gaming Consoles",
+    product_name: "Gaming Consoles",
     price: 400.00,
     description: "a piece of electronic equipment for playing games on",
     image: "https://hips.hearstapps.com/hmg-prod/images/gh-index-gamingconsoles-052-print-preview-1659705142.jpg?crop=1.00xw:0.753xh;0,0.0831xh&resize=1200:*",
     category_id: 1                                  // This should be whatever category it belongs to
 },
+
+]

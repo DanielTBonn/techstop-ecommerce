@@ -38,7 +38,7 @@ Product.init(
       }
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     image: {
@@ -52,13 +52,13 @@ Product.init(
         key: 'id',
       }
     },
-    cart_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'cart',
-            key: 'id'
-        }
-    }
+    // cart_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //         model: 'cart',
+    //         key: 'id'
+    //     }
+    // }
   },
   {
     sequelize,
