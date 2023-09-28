@@ -236,6 +236,16 @@ router.get('/user/cart/', withAuth, async (req,res) => {
   }
 });
 
+router.get('/demo', async(req, res) => {
+  try {
+    res.render('demo');
+  } catch (err) {
+    console.log("There was an error")
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // GET login page route
 router.get('/login', async (req, res) => {
   if (req.session.logged_in) {
