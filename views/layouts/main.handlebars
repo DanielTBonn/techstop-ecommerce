@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>TECHSTOP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{{!-- <script src="https://cdn.tailwindcss.com"></script> --}}
-<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-<link rel="stylesheet" type="text/css" href="/css/tailwind.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {{!--
+  <script src="https://cdn.tailwindcss.com"></script> --}}
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/tailwind.css">
 </head>
+
 <body>
   <header>
     <div class="header-page">
-        <a href="/" class="no-underline"><h1><span class="color1">TECH</span> <span class="color2">STOP</span></h1></a>
-        <div class= "navbar">
-            <a href="/">Home</a>
-            <div class="dropdown">
-                <div class="dropdown-content">
-                    <a href="/category/1">Phones</a>
-                    <a href="/category/2">Computers</a>
-                    <a href="/category/3">Laptops</a>
-                    <a href="/category/4">Gadgets</a>
-                    <a href="/category/5">TVs</a>
-                    <a href="/category/6">Monitors</a>
-                    <a href="/category/7">Accessories</a>
-                    <a href="/category/8">Consoles</a>
-                </div>
-                <a href="#categories">Categories</a>
-                {{#if logged_in}}
-                <a href="/user/cart">Cart</a> 
-                <button id="logout" class="btn-no-style">Logout</button>
-                {{else}}
-                <a href="/login">Login</a>
-                <a href="/signup">Sign Up</a>
-                {{/if}}
-            </div>
+      <a href="/" class="no-underline">
+        <h1><span class="color1">TECH</span> <span class="color2">STOP</span></h1>
+      </a>
+      <div class="navbar">
+        {{!-- <a href="/">Home</a>
+        <div class="dropdown"> --}}
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="#categories">Categories</a>
+                <ul class="categories" >
+                  <li><a href="/category/1">Phones</a></li>
+                  <li><a href="/category/2">Computers</a></li>
+                  <li><a href="/category/3">Laptops</a></li>
+                  <li><a href="/category/4">Gadgets</a></li>
+                  <li><a href="/category/5">TVs</a></li></li>
+                  <li><a href="/category/6">Monitors</a></li>
+                  <li><a href="/category/7">Accessories</a></li>
+                  <li><a href="/category/8">Consoles</a></li>
+                </ul>
+              </li>
+              {{#if logged_in}}
+              <li><a href="/user/cart">Cart</a></li>
+              <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+          {{/if}}
+            </ul>
+            {{!-- <a href="/category/1">Phones</a>
+            <a href="/category/2">Computers</a>
+            <a href="/category/3">Laptops</a>
+            <a href="/category/4">Gadgets</a>
+            <a href="/category/5">TVs</a>
+            <a href="/category/6">Monitors</a>
+            <a href="/category/7">Accessories</a>
+            <a href="/category/8">Consoles</a> --}}
+          </div>
+          {{!-- <a href="#categories">Categories</a>
+          {{#if logged_in}}
+          <a href="/user/cart">Cart</a>
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a> --}}
+          {{!-- {{/if}} --}}
         </div>
+      </div>
     </div>
   </header>
-  
+
   <main>
     {{{body}}}
   </main>
@@ -48,6 +76,5 @@
   {{/if}}
 
 </body>
+
 </html>
-
-

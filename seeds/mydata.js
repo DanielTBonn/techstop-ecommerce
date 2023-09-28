@@ -72,7 +72,9 @@ category_id: 1,
 product_name:"Macbook Pro 14",
 price: 1999.99,
 description:"The 14-inch MacBook Pro with M2 Pro and M2 Max takes power and speed to the next level",
+
 image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455369_sd.jpg;maxHeight=640;maxWidth=550"
+
 category_id: 2,
 },
 {
@@ -237,3 +239,59 @@ image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534
 category_id: 4,
 }
 ]
+// =======
+
+// product_name:"Macbook Pro 13",
+// price: 1099.99,
+// description:"The 13-inch MacBook Pro is more capable than ever. Supercharged by the next-generation M2 chip, it’s Apple’s most portable pro laptop, with up to 20 hours of battery life.",
+// image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6509/6509652_sd.jpg;maxHeight=640;maxWidth=550",
+// category_id: 2,
+
+// product_name:"Dell 13th Gen Laptop",
+// price: 729.99,
+// description:"Turn your content into immersive experiences with enhanced audio features and versatile modes on the new Inspiron 14 2-in-1 laptop. ",
+// image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6539/6539904_sd.jpg;maxHeight=640;maxWidth=550",
+// category_id: 2,
+
+// product_name:"Macbook Air 15",
+// price: 1699.00,
+// description:"The 15-inch MacBook Air is impossibly thin and has a stunning Liquid Retina display.",
+// image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6552/6552867_sd.jpg;maxHeight=640;maxWidth=550",
+// category_id: 2,
+
+// product_name:"Macbook Air 13.6",
+// price: 899.00,
+// description:"Supercharged by the next-generation M2 chip, the redesigned MacBook Air combines incredible performance and up to 18 hours of battery life into its strikingly thin aluminum enclosure.",
+// image:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6509/6509648_sd.jpg;maxHeight=640;maxWidth=550",
+// category_id: 2,
+
+// product_name:"",
+// price: ,
+// description:"",
+// image:"",
+// category_id: 2,
+
+// product_name:"",
+// price: ,
+// description:"",
+// image:"",
+// category_id: 2,
+
+// product_name:"",
+// price: ,
+// description:"",
+// image:"",
+// category_id: 2,
+
+// product_name:"",
+// price: ,
+// description:"",
+// image:"",
+// category_id: 2,
+
+// product_name:"",
+// price: ,
+// description:"",
+// image:"",
+// category_id: 2,
+// >>>>>>> main
