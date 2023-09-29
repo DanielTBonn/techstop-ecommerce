@@ -10,6 +10,7 @@ As a people who are very involved in the techworld, we are often faced with the 
 - [Tests](#tests)
 - [Links](#links)
 - [Questions](#questions)
+- [Collaborators](#collaborators)
 
 ## Installation
   
@@ -38,3 +39,9 @@ https://pacific-fortress-50526-9193db3a3754.herokuapp.com/
 Username: DanielTBonn
 Github: https://github.com/DanielTBonn/
 Email: danieltbonn@gmail.com
+
+## Collaborators
+
+abdulaze19, https://github.com/abdulaze19
+Cdiehl4, https://github.com/Cdiehl4
+evillarreal18, https://github.com/evillarreal18
